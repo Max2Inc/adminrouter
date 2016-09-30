@@ -36,6 +36,14 @@ function util.get_file_content(path)
     return nil
 end
 
+function util.has_value(tab,value)
+    for index,val in ipairs(tab) do
+        if val == value then
+            return true
+        end
+    end
+    return false
+end
 
 -- Monkey-patch string table.
 
