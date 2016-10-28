@@ -45,6 +45,15 @@ function util.has_value(tab,value)
     return false
 end
 
+function util.matches_value(tab,value)
+    for index,val in ipairs(tab) do
+    if string.match(value,"^"..val) then
+        return true
+    end
+    end
+end
+
+
 -- Monkey-patch string table.
 
 function string:split(sep)
